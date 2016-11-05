@@ -1,0 +1,15 @@
+﻿There's currently no way to create migrations programmatically, they must be added via
+PowerShell, as we're going to do shortly
+
+Database.EnsureCreated()
+Database.EnsureDeleted()
+Database.Migrate()
+
+Right after that, open a PowerShell command prompt and navigate through the project's
+root folder, which in our example is as follows:
+ C:\Projects\OpenGameList\src\OpenGameListWebApp\
+Once there, type the following command to add the first migration:
+ dotnet ef migrations add "Initial" -o "Data\Migrations"
+
+ dotnet ef database update
+
